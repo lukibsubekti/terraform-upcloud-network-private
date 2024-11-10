@@ -1,12 +1,12 @@
 
-resource "upcloud_router" "example" {
+resource "upcloud_router" "main" {
   name = var.router_name
 }
 
-resource "upcloud_network" "example" {
+resource "upcloud_network" "main" {
   name = var.network_name # required
   zone = var.zone # required
-  router = upcloud_router.example.id
+  router = upcloud_router.main.id
   labels = var.labels
 
   ip_network { # required

@@ -21,7 +21,8 @@ provider "upcloud" {
 }
 
 module "private_network" {
-  source = "app.terraform.io/luki/network-private/upcloud"
+  source  = "lukibsubekti/network-private/upcloud"
+  version = "1.0.1"
 
   router_name = "example-router"
   network_name = "example-network"
