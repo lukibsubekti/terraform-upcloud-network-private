@@ -1,5 +1,5 @@
 variable "zone" {
-  description = "UpCloud network zone"
+  description = "Network zone"
   type = string
 }
 
@@ -22,10 +22,10 @@ variable "labels" {
 variable "network" {
   description = "Private network details"
   type = object({
-    subnet                = string # eg. "10.0.0.0/24"
+    subnet                = string
     is_dhcp               = bool
-    family                = string # eg. "IPv4"
-    is_dhcp_default_route = optional(bool) # Is the gateway the DHCP default route?
-    gateway_address       = optional(string) # eg. "10.0.0.1"  
+    family                = string
+    is_dhcp_default_route = optional(bool)
+    gateway_address       = optional(string)  
   })
 }
